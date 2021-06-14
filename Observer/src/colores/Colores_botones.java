@@ -7,6 +7,11 @@ package colores;
 
 import java.awt.Color;
 
+import observerimplementation.Observer1;
+import observerimplementation.Subject;
+
+
+
 /**
  *
  * @author Joao
@@ -108,14 +113,17 @@ public class Colores_botones extends javax.swing.JFrame {
     private void btnAMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAMousePressed
         // TODO add your handling code here:
         panel.setBackground(Color.YELLOW);
+        System.out.println("Se cambio a color amarillo");
     }//GEN-LAST:event_btnAMousePressed
 
     private void btnRMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRMousePressed
         panel.setBackground(Color.RED);
+        System.out.println("Se cambio a color rojo");
     }//GEN-LAST:event_btnRMousePressed
 
     private void btnVMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVMousePressed
         panel.setBackground(Color.GREEN);
+        System.out.println("Se cambio a color verde");
     }//GEN-LAST:event_btnVMousePressed
 
     /**
@@ -151,6 +159,12 @@ public class Colores_botones extends javax.swing.JFrame {
                 new Colores_botones().setVisible(true);
             }
         });
+        /////////////////
+        //Subject sub = new Subject();
+        //new Observer1(sub);
+        //sub.setState(10);
+        
+        ////////////////
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
