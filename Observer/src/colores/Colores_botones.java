@@ -123,6 +123,7 @@ public class Colores_botones extends javax.swing.JFrame {
 
     private void btnVMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVMousePressed
         panel.setBackground(Color.GREEN);
+        eti.setText("Cambio a Verde");
         System.out.println("Se cambio a color verde");
     }//GEN-LAST:event_btnVMousePressed
 
@@ -171,7 +172,7 @@ public class Colores_botones extends javax.swing.JFrame {
     private javax.swing.JButton btnA;
     private javax.swing.JButton btnR;
     private javax.swing.JButton btnV;
-    private javax.swing.JLabel eti;
+    public static javax.swing.JLabel eti;
     private javax.swing.JPanel panel;
     // End of variables declaration//GEN-END:variables
 }
