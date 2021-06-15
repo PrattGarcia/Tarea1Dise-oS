@@ -11,7 +11,6 @@ import observerimplementation.Observer1;
 import observerimplementation.Subject;
 
 
-
 /**
  *
  * @author Joao
@@ -37,9 +36,11 @@ public class Colores_botones extends javax.swing.JFrame {
 
         panel = new javax.swing.JPanel();
         btnA = new javax.swing.JButton();
+        
         btnR = new javax.swing.JButton();
         btnV = new javax.swing.JButton();
         eti = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,10 +67,23 @@ public class Colores_botones extends javax.swing.JFrame {
 
         eti.setText("Pendiente");
 
+        jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
         panel.setLayout(panelLayout);
         panelLayout.setHorizontalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(eti)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(84, 84, 84))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnA, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
@@ -78,10 +92,6 @@ public class Colores_botones extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btnV, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
-            .addGroup(panelLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(eti)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelLayout.setVerticalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,8 +102,10 @@ public class Colores_botones extends javax.swing.JFrame {
                     .addComponent(btnR)
                     .addComponent(btnV))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
-                .addComponent(eti)
-                .addGap(51, 51, 51))
+                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eti)
+                    .addComponent(jButton1))
+                .addGap(46, 46, 46))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -104,7 +116,9 @@ public class Colores_botones extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 22, Short.MAX_VALUE))
         );
 
         pack();
@@ -126,6 +140,10 @@ public class Colores_botones extends javax.swing.JFrame {
         eti.setText("Cambio a Verde");
         System.out.println("Se cambio a color verde");
     }//GEN-LAST:event_btnVMousePressed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,6 +191,7 @@ public class Colores_botones extends javax.swing.JFrame {
     private javax.swing.JButton btnR;
     private javax.swing.JButton btnV;
     public static javax.swing.JLabel eti;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel panel;
     // End of variables declaration//GEN-END:variables
 }

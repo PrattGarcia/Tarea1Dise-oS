@@ -13,6 +13,14 @@ public aspect AspectoCambiarColor {
 	    	cont+=1;
 	    }
 	    
+	    pointcut salida() : call(* jButton1*(..) );
+	
+		    before() : salida() {
+		    	
+		    	
+		    	System.out.println("Se ha salido del sistema!!");
+		    }
+	    
 	    
 
 }
