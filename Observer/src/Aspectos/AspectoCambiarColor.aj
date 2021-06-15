@@ -4,7 +4,7 @@ public aspect AspectoCambiarColor {
 	
 	 pointcut cambiocolo() : call(* btn*(..) );
 	    after() : cambiocolo() {
-	    	System.out.println("Me funciona :0");
+	    	System.out.println("Se cambio de color la ventana");
 	    }
 	    
 

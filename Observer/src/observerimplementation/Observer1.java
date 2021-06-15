@@ -7,7 +7,7 @@ public class Observer1 extends Observer{
 	}
 	
 	public void update() {
-		System.out.println("Hi, comojbhbdfjnsdjng");
+		System.out.println("Hi, como estas");
 	}
 
 }
