@@ -1,19 +1,51 @@
 package Aspectos;
 
 import observerimplementation.Observer1;
-import observerimplementation.Observer2;
 import observerimplementation.Subject;
 
 public aspect AspectoObserver {
-	pointcut runObserver() : call (* btn*(..) );
+	pointcut runObserver() : call (* btnAMousePressed*(..) );
 	after() : runObserver() {
-		//se puede poner como un print en el que muestre a qe color se cambio
+		
 		Subject sub = new Subject();
-		System.out.println("Funciona el Aspecto Oberver");
+		System.out.println("Se ha cambiado el color a amarillo");
+		
         new Observer1(sub);
-        new Observer2(sub);
-        sub.setState(10);
+        sub.setState("Se ha modificado la ventana");
+        
 	}
+	
+	pointcut runObserver2() : call (* btnRMousePressed*(..) );
+	after() : runObserver2() {
+		
+		Subject sub = new Subject();
+		System.out.println("Se ha cambiado el color a rojo");
+		
+		new Observer1(sub);
+		sub.setState("Se ha modificado la ventana");
+        
+        
+	}
+	
+	pointcut runObserver3() : call (* btnVMousePressed*(..) );
+	after() : runObserver3() {
+		
+		Subject sub = new Subject();
+		System.out.println("Se ha cambiado el color a verde");
+		new Observer1(sub);
+		sub.setState("Se ha modificado la ventana");
+	}
+	pointcut salida() : call(* jButton1*(..) );
+	
+    before() : salida() {
+    	
+    	Subject sub = new Subject();
+    	System.out.println("Se ha salido del sistema!!");
+    	
+    	new Observer1(sub);
+    	sub.setState("Cerro ventana");
+    	
+    }
 	
 	/*
 	 * pointcut cambiocolo() : call(* btn*(..) );

@@ -127,18 +127,18 @@ public class Colores_botones extends javax.swing.JFrame {
     private void btnAMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAMousePressed
         // TODO add your handling code here:
         panel.setBackground(Color.YELLOW);
-        System.out.println("Se cambio a color amarillo");
+       
     }//GEN-LAST:event_btnAMousePressed
 
     private void btnRMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRMousePressed
         panel.setBackground(Color.RED);
-        System.out.println("Se cambio a color rojo");
+        
     }//GEN-LAST:event_btnRMousePressed
 
     private void btnVMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVMousePressed
         panel.setBackground(Color.GREEN);
         eti.setText("Cambio a Verde");
-        System.out.println("Se cambio a color verde");
+       
     }//GEN-LAST:event_btnVMousePressed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

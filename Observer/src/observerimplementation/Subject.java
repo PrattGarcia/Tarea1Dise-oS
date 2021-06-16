@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Subject {
 	private List<Observer> observers = new ArrayList<>();
-	private int state;
+	private String state;
 	
 	public void addObserver(Observer o) {
 		observers.add(o);
@@ -15,11 +15,11 @@ public class Subject {
 		observers.remove(o);
 	}
 	
-	public int getState() {
+	public String getState() {
 		return state;
 	}
 	
-	public void setState(int value) {
+	public void setState(String value) {
 		this.state = state;
 		execute();
 	}
