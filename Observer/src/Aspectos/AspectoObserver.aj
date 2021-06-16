@@ -41,7 +41,6 @@ public aspect AspectoObserver {
     	
     	Subject sub = new Subject();
     	System.out.println("Se ha salido del sistema!!");
-    	
     	new Observer1(sub);
     	sub.setState("Cerro ventana");
     	

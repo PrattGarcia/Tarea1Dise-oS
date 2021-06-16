@@ -8,7 +8,6 @@ public aspect ConteoCambios {
 	 int cont=0;
 	    after() : cambiocolo() {
 	    	
-	    	//System.out.println("Se cambio de color la ventana");
 	    	Colores_botones.eti.setText("Cambios realizados: "+cont);
 	    	cont+=1;
 	    }
